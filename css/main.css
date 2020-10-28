@@ -69,6 +69,14 @@ aside h5 {
     text-align: center;
 }
 
+aside a {
+    color: #d81118;
+}
+
+aside a:hover {
+    color: #d67f82;
+}
+
 footer {
     background-color: #5A595F;
     margin-top: auto;
