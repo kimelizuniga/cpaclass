@@ -7,7 +7,7 @@ body {
     background-color: #FFF;
     color: #000;
     font-size: 18px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
@@ -22,6 +22,7 @@ section.flexContainer {
     display: flex;
     height: 100%;
     margin-bottom: 14px;
+    flex-grow: 1;
 }
 
 nav {
@@ -40,7 +41,6 @@ nav li {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 70%;
     height: 50px;
     border-bottom-right-radius: 8px;
     line-height: 50px;
@@ -50,6 +50,10 @@ nav li:hover {
     background-color: #5A595F;
 }
 
+nav ul {
+    margin: 0 auto;
+    width: 80%;
+}
 section.mainBody {
     width: 75%;
     padding: 12px;
@@ -100,4 +104,49 @@ a:hover {
 
 h4, h5 {
     font-weight: bold;
+}
+
+.custom-toggler:focus {
+    outline: none;  
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav, section.mainBody, aside, footer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    aside {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        border-top: 2px dashed #d81118;
+        border-bottom: 2px dashed #d81118;
+    }
+
+    section.flexContainer {
+       flex-flow: column;
+    }
+
+    nav {
+        margin-bottom: 1em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    nav li {
+        width: 45%;
+    }
+
 }
