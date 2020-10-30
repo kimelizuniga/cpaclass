@@ -20,10 +20,10 @@
     <section class="flexContainer">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page2.html">Resources</a></li>
-                <li><a href="firstsemester.html">Fall 20'</a></li>
-                <li><a href="index.html">Winter 21'</a></li>
+                <a href="index.html"><li>Home</li></a>
+                <a href="page2.html"><li>Resources</li></a>
+                <a href="firstsemester.html"><li>Fall 20'</li></a>
+                <a href="index.html"><li>Winter 21'</li></a>
             </ul>
         </nav>
     
@@ -47,13 +47,23 @@
     </section>
 
     <footer>
-        <p>Footer, such as other links</p>
+        <h5>Join us on our
+            <a class="redColour" href="/">discord</a> 
+            channel and 
+            <a class="redColour" href="/">facebook</a>
+            group
+       </h5>
+        <ul>
+            <li><a href=""><i class="fab fa-discord"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+        </ul>
     </footer>
 
-    
+    <button onclick="topFunction()" id="goTopBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

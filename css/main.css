@@ -87,10 +87,11 @@ footer {
     margin-bottom: 8px;
     margin-left: 10%;
     border-radius: 2px;
-    height: 10%;
     width: 75%;
     padding: 12px;
+    padding-bottom: 0;
     color: #FFF;
+    text-align: center;
 }
 
 li {
@@ -106,20 +107,30 @@ h4, h5 {
     font-weight: bold;
 }
 
+footer li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 16px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #d67f82;
+}
+
 .custom-toggler:focus {
     outline: none;  
 }
 
-article.infoborder
-{
-    border: #d81118 outset 2px;
-    background-color: #eee;
-    padding: 1%;
-    margin: 1%;
-    margin-left: 1em;
+.redColour {
+    color: #d67f82;
 }
 
-/* CSS FOR SYLING MAIN BODY CONTENTS */
+
+/* CSS FOR STYLING MAIN BODY CONTENTS */
 
 section.mainBody a:hover
 {
@@ -131,6 +142,40 @@ section.mainBody h4 {
     text-underline-position: under;
     margin-bottom: 1em;
 }
+
+article.infoborder
+{
+    border: #d81118 outset 2px;
+    background-color: #eee;
+    padding: 1%;
+    margin: 1%;
+    margin-left: 1em;
+}
+
+/* GO TOP BUTTON */
+
+#goTopBtn {
+    visibility: hidden;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #d81118; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition-timing-function: ease;
+    opacity: 0;
+    transition: opacity 2s, visibility 2s;
+  }
+
+  #goTopBtn:hover {
+      background-color: #5A595F;
+  }
 
 @media (max-width: 700px) {
 
@@ -167,8 +212,12 @@ section.mainBody h4 {
         margin: 0 auto;
     }
 
+    nav a {
+        width: 50%;
+    }
+
     nav li {
-        width: 45%;
+        width: 95%;
     }
 
 }
