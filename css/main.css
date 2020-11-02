@@ -7,7 +7,7 @@ body {
     background-color: #FFF;
     color: #000;
     font-size: 18px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
@@ -22,6 +22,7 @@ section.flexContainer {
     display: flex;
     height: 100%;
     margin-bottom: 14px;
+    flex-grow: 1;
 }
 
 nav {
@@ -40,7 +41,6 @@ nav li {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 70%;
     height: 50px;
     border-bottom-right-radius: 8px;
     line-height: 50px;
@@ -50,6 +50,10 @@ nav li:hover {
     background-color: #5A595F;
 }
 
+nav ul {
+    margin: 0 auto;
+    width: 80%;
+}
 section.mainBody {
     width: 75%;
     padding: 12px;
@@ -83,10 +87,11 @@ footer {
     margin-bottom: 8px;
     margin-left: 10%;
     border-radius: 2px;
-    height: 10%;
     width: 75%;
     padding: 12px;
+    padding-bottom: 0;
     color: #FFF;
+    text-align: center;
 }
 
 li {
@@ -95,11 +100,47 @@ li {
 
 a:hover {
     text-decoration: none;
-    color:  #FFF;
+    color: #FFF;
 }
 
 h4, h5 {
     font-weight: bold;
+}
+
+footer li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 16px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #d67f82;
+}
+
+.custom-toggler:focus {
+    outline: none;  
+}
+
+.redColour {
+    color: #d67f82;
+}
+
+
+/* CSS FOR STYLING MAIN BODY CONTENTS */
+
+section.mainBody a:hover
+{
+    color:  #d67f82 ;
+}
+
+section.mainBody h4 {
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 1em;
 }
 
 article.infoborder
@@ -108,14 +149,35 @@ article.infoborder
     background-color: #eee;
     padding: 1%;
     margin: 1%;
-    
+    margin-left: 1em;
 }
 
-section.mainBody a:hover
-{
-    color:  #d67f82 ;
-}
-/*Making embedded video player responsive to bigger and smaller screen size*/
+/* GO TOP BUTTON */
+
+#goTopBtn {
+    visibility: hidden;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #d81118; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition-timing-function: ease;
+    opacity: 0;
+    transition: opacity 2s, visibility 2s;
+  }
+
+  #goTopBtn:hover {
+      background-color: #5A595F;
+  }
+
+  /*Making embedded video player responsive to bigger and smaller screen size*/
 .embeddedVideo
 
 {
@@ -152,6 +214,53 @@ hr
     border-width: 12px;
     border-color: #d81118 ;
 }
+
+/* Used for mobile responsiveness */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav, section.mainBody, aside, footer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    aside {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        border-top: 2px dashed #d81118;
+        border-bottom: 2px dashed #d81118;
+    }
+
+    section.flexContainer {
+       flex-flow: column;
+    }
+
+    nav {
+        margin-bottom: 1em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    nav a {
+        width: 50%;
+    }
+
+    nav li {
+        width: 95%;
+    }
+
+} 
 
 
 
