@@ -26,7 +26,7 @@ section.flexContainer {
 }
 
 nav {
-    width: 10%;
+    width: 15%;
     color: #FFF;
     font-weight: bold;
 }
@@ -55,7 +55,7 @@ nav ul {
     width: 80%;
 }
 section.mainBody {
-    width: 75%;
+    width: 70%;
     padding: 12px;
     border-top: 12px solid #d81118;
     border-left: 12px solid #d81118;
@@ -178,7 +178,7 @@ article.infoborder
   }
 
   /*Making embedded video player responsive to bigger and smaller screen size*/
-.embeddedVideo
+/* .embeddedVideo
 
 {
     margin-top: 2%;
@@ -192,13 +192,23 @@ article.infoborder
     
 }
 /*Making embedded video player responsive to bigger and smaller screen size*/
-.embeddedVideo iframe
+/* .embeddedVideo iframe
 {
     left:0;
     top:0;
     height:100%;
     width:100%;
     position:absolute;
+} */ 
+
+.embeddedVideo {
+    min-height: 350px; /* Makes the container have a min-height of 350px */
+    margin: 2em auto;
+}
+
+.embeddedVideo iframe {
+    height: 100%; /* Fits 100% in the container .embeddedVideo */
+    width: 100%;
 }
 
 .videoDescription
@@ -217,32 +227,34 @@ hr
 
 /* Used for mobile responsiveness */
 
-@media (max-width: 700px) {
 
-    header h1 {
-        font-size: 24px;
+@media (min-width: 1200px) and (max-width: 1400px) {  /* small Laptops and Desktops screens */
+
+    .embeddedVideo {
+        min-height: 250px; 
     }
 
-    nav, section.mainBody, aside, footer {
+}
+
+@media (max-width: 1200px) {
+    .embeddedVideo {
+        min-height: 250px; 
+    }
+}
+
+@media (max-width: 992px) { /* landscape tablets */
+
+    section.mainBody, aside, footer {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    aside {
-        margin-top: 2em;
-        margin-bottom: 1em;
-        padding-top: 1em;
-        border-top: 2px dashed #d81118;
-        border-bottom: 2px dashed #d81118;
-    }
-
-    section.flexContainer {
-       flex-flow: column;
-    }
-
     nav {
+        width: 80%;
         margin-bottom: 1em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     nav ul {
@@ -260,7 +272,39 @@ hr
         width: 95%;
     }
 
+    section.flexContainer {
+        flex-flow: column;
+     }
+ 
+     aside {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        border-top: 2px dashed #d81118;
+        border-bottom: 2px dashed #d81118;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+}
+
+@media (max-width: 600px) { /* smaller phones */
+
+    nav, section.mainBody, aside, footer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .embeddedVideo {
+        min-height: 200px; 
+    }
+
 } 
-
-
-
