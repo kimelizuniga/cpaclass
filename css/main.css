@@ -85,9 +85,10 @@ footer {
     background-color: #5A595F;
     margin-top: auto;
     margin-bottom: 8px;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 2px;
-    width: 75%;
+    width: 70%;
     padding: 12px;
     padding-bottom: 0;
     color: #FFF;
