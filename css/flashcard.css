@@ -1,0 +1,46 @@
+footer {
+    margin-top: 1em;
+}
+
+.flashBody {
+    height: 100%;
+    padding-bottom: 1em;
+}
+
+.buttons {
+    text-align: center;
+    margin: 1em;
+}
+
+#question, #answer {
+    width: 60%;
+    min-height: 5em;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1.5em;
+}
+
+#question {
+    background-color: #5A595F;
+}
+
+#answer {
+    display: none;
+    background-color: red;
+}
+
+#show, #hide {
+    width: 4em;
+}
+
+#hide {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    #question, #answer {
+        width: 90%;
+    }
+}

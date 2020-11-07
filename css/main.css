@@ -178,30 +178,6 @@ article.infoborder
       background-color: #5A595F;
   }
 
-  /*Making embedded video player responsive to bigger and smaller screen size*/
-/* .embeddedVideo
-
-{
-    margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
-    float: left;
-    overflow:hidden;
-    padding-bottom:20%;
-    position:relative;
-    height:0;
-    
-}
-/*Making embedded video player responsive to bigger and smaller screen size*/
-/* .embeddedVideo iframe
-{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-} */ 
-
 .embeddedVideo {
     min-height: 350px; /* Makes the container have a min-height of 350px */
     margin: 2em auto;
