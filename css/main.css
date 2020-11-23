@@ -54,6 +54,7 @@ nav ul {
     margin: 0 auto;
     width: 80%;
 }
+
 section.mainBody {
     width: 70%;
     padding: 12px;
@@ -61,6 +62,19 @@ section.mainBody {
     border-left: 12px solid #d81118;
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
+}
+
+section.resources li, section.tableOfContents li {
+    list-style: none;
+}
+
+section.studybuddy article, h5 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+section.studybuddy ul li {
+    padding-left: 0.5em;
 }
 
 aside {
@@ -95,10 +109,6 @@ footer {
     text-align: center;
 }
 
-li {
-    list-style: none;
-}
-
 a:hover {
     text-decoration: none;
     color: #FFF;
@@ -122,6 +132,12 @@ footer a:hover {
     color: #d67f82;
 }
 
+h6 {
+    font-weight: bold;
+    color:#d81118;
+    text-shadow: 1px 0px 1px black;
+}
+
 .custom-toggler:focus {
     outline: none;  
 }
@@ -130,6 +146,19 @@ footer a:hover {
     color: #d67f82;
 }
 
+.text-small {
+    font-size: small;
+    display: inline-block;
+}
+
+.list-heading {
+    color: #d81118;
+    text-shadow: 1px 0px 1px black;
+}
+
+.sub-link {
+    color: rgb(54, 54, 192);
+}
 
 /* CSS FOR STYLING MAIN BODY CONTENTS */
 
